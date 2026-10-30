@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/printer.svg" width="320" alt="Ilustração de uma mini impressora térmica">
+  <img src="docs/images/printer-photo.webp" width="360" alt="Mini impressora térmica Bluetooth">
 </p>
 
 <h1 align="center">Mini Printer</h1>
@@ -18,14 +18,16 @@
 ## Telas
 
 <p align="center">
-  <img src="docs/images/home.png" width="260" alt="Tela inicial">
-  &nbsp;&nbsp;
-  <img src="docs/images/settings.png" width="260" alt="Configurações da impressora">
+  <img src="docs/images/home.png" width="250" alt="Tela inicial com histórico">
+  &nbsp;
+  <img src="docs/images/editor.png" width="250" alt="Editor de foto com ajuste de tom e pontilhado">
+  &nbsp;
+  <img src="docs/images/settings.png" width="250" alt="Configurações da impressora">
 </p>
 
 ## Recursos
 
-- **Galeria e câmera** — recorte, rotação e espelhamento, ajuste de tom, bordas (incluindo polaroid) e legenda. Várias fotos de uma vez.
+- **Galeria e câmera** — recorte, rotação e espelhamento, ajuste de tom, pontilhado (Floyd–Steinberg, Atkinson, Bayer, limiar), bordas (incluindo polaroid) e legenda. Várias fotos de uma vez.
 - **Documento** — PDF página a página ou foto de papel.
 - **Texto** — notas, listas e recados com fonte, tamanho e negrito.
 - **Compartilhar** — imprima direto de outros apps (imagens, PDF e texto) pelo menu "Compartilhar".
@@ -58,3 +60,5 @@ Requer JDK 17 e Android SDK 36.
 ## Licença
 
 [MIT](LICENSE). Projeto independente, sem vínculo com fabricantes de impressoras ou outros apps.
+
+Foto usada nas capturas de tela: Buzz Aldrin na Apollo 11 (NASA, domínio público).
