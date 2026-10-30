@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3a3f"/>
+      <stop offset="1" stop-color="#1f1f23"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1efe9"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="240" cy="318" rx="170" ry="16" fill="#000" opacity="0.12"/>
+  <!-- paper coming out -->
+  <g transform="rotate(-4 240 150)">
+    <rect x="168" y="26" width="144" height="150" rx="4" fill="url(#paper)" stroke="#d9d5cc" stroke-width="2"/>
+    <rect x="186" y="44" width="108" height="64" rx="6" fill="#2b2b30"/>
+    <circle cx="214" cy="68" r="10" fill="#f3c443"/>
+    <path d="M186 108 L222 80 L246 98 L268 82 L294 104 L294 108 Z" fill="#8a8a92"/>
+    <rect x="186" y="120" width="108" height="7" rx="3.5" fill="#2b2b30"/>
+    <rect x="186" y="134" width="76" height="7" rx="3.5" fill="#2b2b30"/>
+    <rect x="186" y="148" width="92" height="7" rx="3.5" fill="#2b2b30"/>
+  </g>
+  <!-- printer body -->
+  <rect x="96" y="150" width="288" height="160" rx="36" fill="url(#body)"/>
+  <rect x="96" y="150" width="288" height="40" rx="20" fill="#46464c"/>
+  <rect x="150" y="164" width="180" height="12" rx="6" fill="#111114"/>
+  <!-- front details -->
+  <circle cx="330" cy="250" r="14" fill="#f3c443"/>
+  <circle cx="330" cy="250" r="6" fill="#d9a92a"/>
+  <rect x="130" y="244" width="40" height="12" rx="6" fill="#55555c"/>
+  <circle cx="190" cy="250" r="5" fill="#5fd38d"/>
+</svg>
