@@ -43,10 +43,26 @@ data class PhotoEdit(
     val totalRotation get() = rotation90 * 90f + fineRotation
 }
 
-enum class TextFont(val label: String, val typeface: Typeface) {
-    SANS("Sans", Typeface.SANS_SERIF),
-    SERIF("Serif", Typeface.SERIF),
-    MONO("Mono", Typeface.MONOSPACE),
+enum class TextFont(val label: String) {
+    SANS("Sans"),
+    SERIF("Serif"),
+    MONO("Mono");
+
+    val typeface: Typeface
+        get() = when (this) {
+            SANS -> Typeface.SANS_SERIF
+            SERIF -> Typeface.SERIF
+            MONO -> bundledMono ?: Typeface.MONOSPACE
+        }
+
+    companion object {
+        /**
+         * Set at startup. Bundled because system MONOSPACE falls back to the sans face on many
+         * OEM ROMs/font themes and has no real bold.
+         */
+        @Volatile
+        var bundledMono: Typeface? = null
+    }
 }
 
 data class TextStyle(
@@ -106,7 +122,10 @@ object Pipeline {
         val paint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
             color = Color.BLACK
             textSize = style.sizePx.toFloat()
-            typeface = Typeface.create(style.font.typeface, if (style.bold) Typeface.BOLD else Typeface.NORMAL)
+            val tf = Typeface.create(style.font.typeface, if (style.bold) Typeface.BOLD else Typeface.NORMAL)
+            typeface = tf
+            // Like TextView: smear when the face has no real bold (StaticLayout won't do it for us).
+            isFakeBoldText = style.bold && !tf.isBold
         }
         val content = text.ifEmpty { " " }
         val layout = StaticLayout.Builder.obtain(content, 0, content.length, paint, width)

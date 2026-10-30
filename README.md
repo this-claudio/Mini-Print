@@ -62,3 +62,4 @@ Requer JDK 17 e Android SDK 36.
 [MIT](LICENSE). Projeto independente, sem vínculo com fabricantes de impressoras ou outros apps.
 
 Foto usada nas capturas de tela: Buzz Aldrin na Apollo 11 (NASA, domínio público).
+Fonte mono: [Courier Prime](https://github.com/quoteunquoteapps/CourierPrime) ([SIL OFL 1.1](docs/licenses/CourierPrime-OFL.txt)).
